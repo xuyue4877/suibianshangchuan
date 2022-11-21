@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="el-api">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../完整jar/el-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../完整jar/jsp-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../完整jar/servlet-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

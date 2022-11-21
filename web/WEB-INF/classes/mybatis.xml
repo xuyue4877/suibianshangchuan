@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--1、读取配置文件-->
+    <properties resource="dbutil.properties"/>
+
+    <!--2、通用配置-->
+    <settings>
+        <!--在控制台打印sql语句  sql的执行过程-->
+        <!-- 打印sql日志   控制台中打印sql-->
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+    </settings>
+    <!--配置别名-->
+    <typeAliases>
+        <typeAlias type="com.bjpn.bean.User" alias="u"/>
+    </typeAliases>
+    <!--3、配置数据源信息
+    environments
+        default:指明当前使用那组数据源连接   他的值指向environment的id
+    -->
+    <environments default="mysqlConn">
+        <!--配置详细的数据源信息
+            id：是唯一标识  是当前数据源信息的名字
+        -->
+        <environment id="mysqlConn">
+            <!--事务管理方式  JDBC是使用jdbc的事务方式   MANAGED:不使用事务-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--数据源-->
+            <dataSource type="POOLED">
+                <property name="driver" value="${driverName}"/>
+                <property name="url" value="${urlName}"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+
+    </environments>
+    <!--4、sql语句-->
+    <mappers>
+        <!--我们会把sql语句写在xml文件中   在核心配置文件中引入sql文件的路径即可-->
+        <!-- <mapper resource="mapper/StudentMapper.xml"/>
+         <mapper resource="mapper/EmpMapper.xml"/>
+         <mapper resource="com/bjpn/mapper/StudentMapper1.xml"/>-->
+        <!--读取当前包下面的所有mapper.xml
+            只能用在mapper文件写在java文件夹下
+        -->
+        <package name="com.bjpn.mapper"/>
+    </mappers>
+
+</configuration>

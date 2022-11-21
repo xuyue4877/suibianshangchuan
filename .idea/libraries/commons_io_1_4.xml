@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="commons-io-1.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../完整jar/commons-io-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../完整jar/commons-fileupload-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../完整jar/fastjson-1.2.73.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../完整jar/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../完整jar/standard.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
